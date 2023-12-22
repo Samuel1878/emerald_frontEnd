@@ -1,8 +1,9 @@
 import { View, Text } from "react-native";
-import styles from "../libs/style";
+import stylesCon from "../libs/style";
 import { LoginBtn, RegisterBtn } from "../components/logRegBtn";
 import { BlurView } from "expo-blur";
 export default function LogReg({navigation}) {
+      const styles = stylesCon();
   return (
       <BlurView style={styles.btnBlurCon} intensity={50} tint="light">
         <View style={styles.btnContainer}>

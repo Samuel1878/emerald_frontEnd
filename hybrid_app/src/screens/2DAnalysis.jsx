@@ -1,14 +1,14 @@
 import { TouchableOpacity, View,Text,SafeAreaView,VirtualizedList } from "react-native";
-import styles from "../libs/style";
+import stylesCon from "../libs/style";
 import { useContext, useState,useRef, useEffect } from "react";
-import GlobalContext from "../services/global/globalContext";
 import DynamicNumber from "../components/DynamicNumbers";
 import { Picker } from "@react-native-picker/picker";
 import DataContext from "../services/data/dataContext";
 import themeProvider from "../libs/theme";
 
 const TwoD_Analysis = () => {
-     const colors = themeProvider().colors;
+    const colors = themeProvider().colors;
+    const styles = stylesCon();
     const {history2D,limit,setLimit} = useContext(DataContext)
     const [selected,setSelected] = useState("5");
     const pickerRef = useRef();

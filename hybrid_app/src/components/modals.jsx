@@ -1,8 +1,9 @@
 import { BlurView } from "expo-blur";
 import { Modal, Text, View } from "react-native";
-import Styles from "../libs/Styles";
+import StylesCon from "../libs/Styles";
 
 export const ChangeModel = ({changed})=> {
+    const Styles = StylesCon();
     return(
         <Modal
         animationType="fade"

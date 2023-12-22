@@ -1,12 +1,8 @@
-import { View ,Text, FlatList, SafeAreaView, VirtualizedList, TouchableOpacity} from "react-native";
-import styles from "../libs/style";
-import { LoginBtn, RegisterBtn } from "../components/logRegBtn";
-import {BlurView} from "expo-blur";
+import { View ,Text, SafeAreaView, VirtualizedList, TouchableOpacity} from "react-native";
+import stylesCon from "../libs/style";
 import LogReg from "../layouts/logReg";
-import { useContext, useEffect,useState,useRef, useMemo } from "react";
-import GlobalContext from "../services/global/globalContext";
+import { useContext, useEffect,useState,useRef } from "react";
 import ServiceBtn from "../components/ServiceBtn";
-import Loader from "../components/loader";
 import { Picker } from "@react-native-picker/picker";
 import LottieView from "lottie-react-native";
 import { AntDesign } from "@expo/vector-icons";
@@ -17,6 +13,7 @@ import themeProvider from "../libs/theme";
 
 const TwoD = ({navigation}) => {
     const colors = themeProvider().colors;
+    const styles = stylesCon();
     const {history2D,live2D,limit,setLimit,setPage,page} = useContext(DataContext)
     const {userToken} = useContext(AuthContext);
     const animation = useRef(null);

@@ -3,10 +3,9 @@ import { Text, View } from "react-native"
 import { useContext, useEffect } from "react";
 import DataContext from "../services/data/dataContext";
 import { useTranslation } from "react-i18next"; 
-import { useTheme } from "@react-navigation/native";
 import LocalContext from "../services/localization/localContext";
 import themeProvider from "../libs/theme";
-import styles from "../libs/style";
+import stylesCon from "../libs/style";
 
 
 const Header_Max_Height = 250;
@@ -15,6 +14,7 @@ const DynamicHeader = ({navigation, animHeaderValue}) => {
     const {live2D} = useContext(DataContext);
     const {lang,setLang,theme,toggleTheme,useSystemTheme} = useContext(LocalContext);
     const colors = themeProvider().colors;
+    const styles = stylesCon();
     const {t,i18n} = useTranslation();
 
     

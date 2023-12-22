@@ -1,13 +1,14 @@
 import { useContext } from "react";
 import { View,Text } from "react-native"
 import LocalContext from "../services/localization/localContext";
-import Styles from "../libs/Styles";
+import StylesCon from "../libs/Styles";
 import { Ionicons } from "@expo/vector-icons";
 import themeProvider from "../libs/theme";
 
 const Vouchers = () => {
     const {vouchers} = useContext(LocalContext);
     const colors = themeProvider().colors;
+    const Styles = StylesCon();
     console.log(vouchers);
     return (
       <View style={Styles.voucherCon}>

@@ -1,5 +1,5 @@
 import { View,Text ,Image, Platform, TouchableWithoutFeedback, Keyboard} from "react-native";
-import styles from "../libs/style";
+import stylesCon from "../libs/style";
 import { TextInput } from "react-native";
 import { TouchableOpacity } from "react-native";
 import { useContext, useEffect, useState } from "react";
@@ -10,7 +10,8 @@ import { LOGIN_URL } from "../hooks/config";
 import themeProvider from "../libs/theme";
 
 const Login = ({navigation}) =>{
-  const colors = themeProvider().colors;
+    const styles = stylesCon();
+    const colors = themeProvider().colors;
     const [phone, setPhone] = useState("");
     const [password, setPwd] = useState("");
     const [validNo, setValidNo] = useState(false);

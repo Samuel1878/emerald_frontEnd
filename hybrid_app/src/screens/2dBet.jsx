@@ -7,7 +7,7 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
 } from "react-native";
-import styles from "../libs/style";
+import stylesCon from "../libs/style";
 import WheelPickerExpo from "react-native-wheel-picker-expo";
 import { useEffect, useState, useRef, useCallback, useContext, useMemo } from "react";
 import { Entypo } from "@expo/vector-icons";
@@ -17,8 +17,9 @@ import BetContext from "../services/bet/betContext";
 import themeProvider from "../libs/theme";
 
 const TwoD_Bet = ({ navigation }) => {
-     const colors = themeProvider().colors;
-    const {money} = useContext(GlobalContext)
+  const styles = stylesCon();
+  const colors = themeProvider().colors;
+  const {money} = useContext(GlobalContext)
   const [firstDigit, setFirstDigit] = useState({ label: "0" });
   const [secondDigit, setSecondDigit] = useState({ label: "0" });
   const [digitPair, setDigitPair] = useState("");

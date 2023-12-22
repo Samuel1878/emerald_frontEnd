@@ -1,10 +1,12 @@
 import React, { useRef, useEffect } from "react";
-import { Button, View } from "react-native";
+import {  View } from "react-native";
 import LottieView from "lottie-react-native";
-import styles from "../libs/style";
+import stylesCon from "../libs/style";
 
 export default function Loader() {
   const animation = useRef(null);
+    const styles = stylesCon();
+  
   useEffect(() => {
      animation.current?.play();
   }, []);

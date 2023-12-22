@@ -1,5 +1,5 @@
 import { Image, TextInput, View ,Text, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard, TouchableOpacity} from "react-native"
-import styles from "../libs/style"
+import stylesCon from "../libs/style"
 import { useContext, useEffect, useState } from "react";
 import GlobalContext from "../services/global/globalContext";
 import LottieView from "lottie-react-native";
@@ -10,6 +10,7 @@ import axios from "axios";
 import { ChangeModel } from "../components/modals";
 
 const Me = ()=>{
+    const styles = stylesCon();
     const {profile,phone,name,navigation} = useContext(GlobalContext);
     const {userToken} = useContext(AuthContext)
     const [nameChange, setNameChange] = useState(name); 

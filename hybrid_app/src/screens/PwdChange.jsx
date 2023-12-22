@@ -1,16 +1,16 @@
-import { Modal, Text, TextInput, TouchableOpacity, TouchableWithoutFeedback, View } from "react-native"
+import { Text, TextInput, TouchableOpacity, View } from "react-native"
 import styles from "../libs/style";
-import { useContext, useEffect, useReducer, useState } from "react";
+import { useContext, useEffect,  useState } from "react";
 import { FontAwesome } from "@expo/vector-icons";
 import AuthContext from "../services/auth/authContext";
 import { _CHANGE_PWD_URL } from "../hooks/config";
 import axios from "axios";
-import Styles from "../libs/Styles";
-import { BlurView } from "expo-blur";
+import StylesCon from "../libs/Styles";
 import { ChangeModel } from "../components/modals";
 import themeProvider from "../libs/theme";
 
 const PwdChange = ({navigation}) =>{
+    const Styles = StylesCon();
     const {userToken} = useContext(AuthContext);
     const colors = themeProvider().colors;
     const[oldPwd, setOldPwd] = useState("");

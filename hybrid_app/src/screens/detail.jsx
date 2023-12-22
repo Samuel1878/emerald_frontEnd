@@ -1,5 +1,5 @@
 import { View ,Text} from "react-native"
-import Styles from "../libs/Styles"
+import StylesCon from "../libs/Styles"
 import { useContext } from "react"
 import LocalContext from "../services/localization/localContext"
 import { AntDesign } from '@expo/vector-icons';
@@ -7,6 +7,7 @@ import GlobalContext from "../services/global/globalContext";
 import themeProvider from "../libs/theme";
 export const Details = ()=>{
   const colors = themeProvider().colors;
+      const Styles = StylesCon();
     const {detail} = useContext(LocalContext);
     const {name,phone} = useContext(GlobalContext);
     return (

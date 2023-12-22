@@ -1,10 +1,11 @@
 import { View,Text } from "react-native";
-import styles from "../libs/style";
+import stylesCon from "../libs/style";
 import { useContext } from "react";
 import DataContext from "../services/data/dataContext";
 
 const TwoDmini = () => {
   const {results2D} = useContext(DataContext);
+  const styles = stylesCon();
   return (
     <View style={styles.twoDmini}>
       <View style={styles.dataA}>
@@ -46,6 +47,7 @@ const TwoDmini = () => {
 };
 export const InternetData = () => {
   const {results2D} = useContext(DataContext);
+  const styles = stylesCon();
   console.log(results2D)
     return (
       <View style={styles.internetDataCon}>

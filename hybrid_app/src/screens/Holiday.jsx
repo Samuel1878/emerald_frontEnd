@@ -1,10 +1,11 @@
 import { FlatList, View,Text } from "react-native"
-import Styles from "../libs/Styles"
+import StylesCon from "../libs/Styles"
 import { useEffect, useState } from "react";
 import { InstanceReq } from "../libs/helper/axios_get";
 
 
 const Holidays = ()=> {
+    const Styles = StylesCon();
     const [data,setData] = useState([]);
     const options = {
         method: 'GET',

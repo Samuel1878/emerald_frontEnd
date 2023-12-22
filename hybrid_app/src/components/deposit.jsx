@@ -1,5 +1,5 @@
 import { View ,Text,TextInput, Image, Modal, Pressable} from "react-native"
-import Styles from "../libs/Styles"
+import StylesCon from "../libs/Styles"
 import { useContext, useEffect, useState } from "react"
 import LocalContext from "../services/localization/localContext"
 import { ayaPay, cbPay, kbzPay, wavePay } from "../libs/data"
@@ -14,10 +14,10 @@ import * as Clipboard from "expo-clipboard";
 import * as FileSystem from "expo-file-system";
 import GlobalContext from "../services/global/globalContext"
 import { BlurView } from "expo-blur"
-import { useTheme } from "@react-navigation/native"
 import themeProvider from "../libs/theme"
 const DepositLayout = () =>{
     const colors = themeProvider().colors;
+    const Styles = StylesCon();
     const {depoMethod,deposit,setDeposit} = useContext(LocalContext);
     const {navigation} = useContext(GlobalContext)
     const {userToken} = useContext(AuthContext);

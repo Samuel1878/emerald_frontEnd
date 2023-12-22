@@ -1,5 +1,5 @@
 import { TouchableOpacity, View ,Text, TextInput} from "react-native";
-import Styles from "../libs/Styles";
+import StylesCon from "../libs/Styles";
 import { useContext, useEffect, useState } from "react";
 import { REGEX_PWD, pinREGEX } from "../libs/data";
 import axios from "axios";
@@ -9,7 +9,7 @@ import { ChangeModel } from "./modals";
 import GlobalContext from "../services/global/globalContext";
 
 export const Forget = ({navigation}) => {
-
+  const Styles = StylesCon();
   return (
     <View style={Styles.Container}>
       <View style={Styles.forgetCon}>
@@ -24,6 +24,7 @@ export const Forget = ({navigation}) => {
   );
 };
 export const ForgetPin = () => {
+    const Styles = StylesCon();
     const {userToken} = useContext(AuthContext);
     const {navigation} = useContext(GlobalContext);
     const [pin,setPin] = useState("");

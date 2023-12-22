@@ -1,5 +1,5 @@
-import { TextInput, Touchable, TouchableOpacity, View,Text, TouchableHighlight } from "react-native"
-import Styles from "../libs/Styles"
+import { TextInput, Touchable, TouchableOpacity, View,Text } from "react-native"
+import StylesCon from "../libs/Styles"
 import { useContext, useEffect, useState } from "react"
 import GlobalContext from "../services/global/globalContext"
 import { pinREGEX } from "../libs/data"
@@ -9,6 +9,7 @@ import axios from "axios"
 import { ChangeModel } from "../components/modals"
 
 const Pin = ({navigation})=>{
+      const Styles = StylesCon();
     const {pin,setPin} = useContext(GlobalContext);
     const {userToken} = useContext(AuthContext)
     const [fPin,setFPin] = useState("")

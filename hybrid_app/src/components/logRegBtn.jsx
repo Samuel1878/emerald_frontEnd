@@ -1,7 +1,8 @@
 import { TouchableOpacity, View,Text } from "react-native";
-import styles from "../libs/style";
+import stylesCon from "../libs/style";
 
 export const LoginBtn = ({navigation}) =>{
+      const styles = stylesCon();
     return(
         <TouchableOpacity
             onPress={()=>navigation?.navigate("login")}
@@ -14,6 +15,7 @@ export const LoginBtn = ({navigation}) =>{
 
 }
 export const RegisterBtn = ({navigation}) =>{
+        const styles = stylesCon();
     return(
         <TouchableOpacity
             onPress={()=>navigation?.navigate("register")}

@@ -1,5 +1,5 @@
-import { TouchableOpacity, View ,Text,Image, TextInput, FlatList, RefreshControl, ScrollView} from "react-native";
-import styles from "../libs/style";
+import { TouchableOpacity, View ,Text,Image, FlatList, RefreshControl, ScrollView} from "react-native";
+import stylesCon from "../libs/style";
 import LottieView from "lottie-react-native";
 import { useContext, useEffect, useState ,useCallback} from "react";
 import GlobalContext from "../services/global/globalContext";
@@ -15,6 +15,7 @@ import SocketContext from "../services/socket/socketContext";
 import { FETCH_INFO } from "../libs/actions";
 import themeProvider from "../libs/theme";
 const Wallet = ()=>{ 
+  const styles = stylesCon();
   const colors = themeProvider().colors;
   const {money,navigation,payments,level,phone,name} = useContext(GlobalContext);
   const {userToken} = useContext(AuthContext);

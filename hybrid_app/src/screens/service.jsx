@@ -2,7 +2,7 @@ import { Keyboard, KeyboardAvoidingView, TextInput, TouchableWithoutFeedback, Vi
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
-import Styles from "../libs/Styles";
+import StylesCon from "../libs/Styles";
 import { useContext, useRef, useState } from "react";
 import LottieView from "lottie-react-native";
 import { AntDesign } from "@expo/vector-icons";
@@ -10,6 +10,7 @@ import GlobalContext from "../services/global/globalContext";
 import themeProvider from "../libs/theme";
 
 const ServiceChat = () => {
+      const Styles = StylesCon();
   const colors = themeProvider().colors;
     const {profile} = useContext(GlobalContext);
     const [multiline, setMultiline] = useState(false)

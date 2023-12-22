@@ -1,6 +1,6 @@
 import { TouchableOpacity, View ,Text, TextInput, Image, Modal, Pressable} from "react-native";
-import Styles from "../libs/Styles";
-import { useContext, useEffect, useState } from "react";
+import StylesCon from "../libs/Styles";
+import { useContext, useState } from "react";
 import GlobalContext from "../services/global/globalContext";
 import { AntDesign } from '@expo/vector-icons';
 import { ayaPay, cbPay, kbzPay, wavePay } from "../libs/data";
@@ -10,7 +10,8 @@ import { WITHDRAWL } from "../hooks/config";
 import AuthContext from "../services/auth/authContext";
 import themeProvider from "../libs/theme";
 const WithDrawl = () => {
-  const colors = themeProvider().colors;
+    const Styles = StylesCon();
+    const colors = themeProvider().colors;
     const {payments,money,pin,navigation} = useContext(GlobalContext);
     const {userToken} = useContext(AuthContext)
     const [pinn, setPinn] = useState("");

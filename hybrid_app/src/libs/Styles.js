@@ -1,6 +1,6 @@
 import { StyleSheet, Platform, Dimensions } from "react-native";
 import themeProvider from "./theme";
-const Styles = () => {
+const StylesCon = () => {
   const colors = themeProvider().colors;
   const StylesS = StyleSheet.create({
     Container: {
@@ -471,7 +471,7 @@ const Styles = () => {
       fontSize: 17,
       fontFamily: "Roboto_Bold",
       fontWeight: "600",
-      color: text_2,
+      color: colors.text_2,
     },
     amountCon: {
       padding: 10,
@@ -482,7 +482,7 @@ const Styles = () => {
       fontSize: 16,
       fontFamily: "Roboto_Bold",
       fontWeight: "600",
-      color: app_2,
+      color: colors.app_2,
     },
     amountInput: {
       paddingVertical: 20,
@@ -509,7 +509,7 @@ const Styles = () => {
       fontSize: 16,
       fontFamily: "Roboto_Bold",
       fontWeight: "600",
-      color: app_2,
+      color: colors.app_2,
     },
     pinBtn: {
       padding: 10,
@@ -686,7 +686,7 @@ const Styles = () => {
       fontSize: 40,
       fontFamily: "Roboto_Bold",
       fontWeight: "500",
-      color: text_2,
+      color: colors.text_2,
       marginVertical: 10,
     },
     details: {
@@ -700,7 +700,7 @@ const Styles = () => {
       fontSize: 15,
       fontFamily: "Roboto_Bold",
       fontWeight: "500",
-      color: app_2,
+      color: colors.app_2,
       marginVertical: 5,
     },
     line: {
@@ -720,7 +720,7 @@ const Styles = () => {
       fontSize: 18,
       fontFamily: "Roboto_Bold",
       fontWeight: "500",
-      color: app_3,
+      color: colors.app_3,
       marginVertical: 20,
     },
     setPinInCon: {
@@ -850,13 +850,13 @@ const Styles = () => {
       fontSize: 15,
       fontFamily: "Roboto_Bold",
       fontWeight: "500",
-      color: app_2,
+      color: colors.app_2,
     },
     warn: {
       fontSize: 13,
       fontFamily: "Roboto_Bold",
       fontWeight: "500",
-      color: text_3,
+      color: colors.text_3,
     },
 
     ////DEPOSIT SCREEN /////////////******************
@@ -866,7 +866,7 @@ const Styles = () => {
       borderRadius: 10,
       backgroundColor: colors.bg_3,
       marginVertical: 10,
-      shadowColor: bg_1,
+      shadowColor: colors.bg_1,
       shadowOffset: { x: 10, y: 10 },
       shadowOpacity: 0.5,
       shadowRadius: 10,
@@ -1020,7 +1020,7 @@ const Styles = () => {
       fontSize: 17,
       fontFamily: "Roboto_Bold",
       fontWeight: "600",
-      color: app_2,
+      color: colors.app_2,
     },
     TranId: {
       backgroundColor: colors.bg_2,
@@ -1050,7 +1050,7 @@ const Styles = () => {
       fontSize: 15,
       fontFamily: "Roboto_Bold",
       fontWeight: "600",
-      color: text_2,
+      color: colors.text_2,
     },
     depositDataTxt: {
       fontSize: 18,
@@ -1062,7 +1062,7 @@ const Styles = () => {
       fontSize: 18,
       fontFamily: "Roboto_Bold",
       fontWeight: "600",
-      color: text_2,
+      color:colors.text_2,
       marginVertical: 5,
     },
     depositBtnTxt: {
@@ -1126,8 +1126,7 @@ const Styles = () => {
       fontSize: 17,
       fontFamily: "Roboto_Bold",
       fontWeight: "600",
-      color: text_2,
-
+      color: colors.text_2,
       textAlign: "center",
     },
     footerCon: {
@@ -1167,7 +1166,7 @@ const Styles = () => {
       fontSize: 14,
       fontFamily: "Roboto_Bold",
       fontWeight: "600",
-      color: text_3,
+      color: colors.text_3,
       marginVertical: 10,
       textAlign: "center",
     },
@@ -1268,14 +1267,14 @@ const Styles = () => {
       fontSize: 16,
       fontFamily: "Roboto_Bold",
       fontWeight: "600",
-      color: text_2,
+      color: colors.text_2,
       marginVertical: 5,
     },
     Txt3: {
       fontSize: 18,
       fontFamily: "Roboto_Bold",
       fontWeight: "600",
-      color: text_3,
+      color: colors.text_3,
       marginVertical: 5,
       // textAlign: "center",
     },
@@ -1283,7 +1282,7 @@ const Styles = () => {
       fontSize: 22,
       fontFamily: "Roboto_Bold",
       fontWeight: "700",
-      color: text_3,
+      color: colors.text_3,
       marginVertical: 5,
       textAlign: "center",
     },
@@ -1368,7 +1367,7 @@ const Styles = () => {
       fontSize: 18,
       fontFamily: "Roboto_Bold",
       fontWeight: "600",
-      color: app_2,
+      color: colors.app_2,
       margin: 5,
     },
 
@@ -1394,7 +1393,7 @@ const Styles = () => {
       alignSelf: "center",
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: bg_1,
+      backgroundColor: colors.bg_1,
       borderRadius: "10%",
       elevation: 5,
     },
@@ -1411,4 +1410,4 @@ const Styles = () => {
   return StylesS
 };
 
-export default Styles;
+export default StylesCon;

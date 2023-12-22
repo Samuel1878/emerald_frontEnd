@@ -1,5 +1,5 @@
 import { TextInput, View,Text } from "react-native"
-import Styles from "../libs/Styles";
+import StylesCon from "../libs/Styles";
 import { TouchableOpacity } from "react-native";
 import { useContext, useEffect, useState } from "react";
 import LocalContext from "../services/localization/localContext";
@@ -8,6 +8,7 @@ import GlobalContext from "../services/global/globalContext";
 import axios from "axios";
 
 export const ForgetMain = () => {
+    const Styles = StylesCon();
     const {forgetNo,setForgetNo} = useContext(LocalContext);
     const {navigation,phone} = useContext(GlobalContext);
     const [sent,setSent] = useState(false);

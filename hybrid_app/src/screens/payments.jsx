@@ -1,13 +1,14 @@
 import { View,Text,FlatList,Image,TouchableOpacity } from "react-native"
-import Styles from "../libs/Styles";
-styles
-import { forwardRef, useContext, useEffect, useState } from "react"
+import StylesCon from "../libs/Styles";
+import {  useContext, useEffect, useState } from "react"
 import GlobalContext from "../services/global/globalContext"
 import { Data, ayaPay, cbPay, kbzPay, wavePay } from "../libs/data"
-import styles from "../libs/style";
+import stylesCon from "../libs/style";
 import { Footer } from "../components/footer";
 
 const Payments = () =>{
+      const styles = stylesCon();
+      const Styles = StylesCon();
     const {payments,navigation} = useContext(GlobalContext);
     const [data,setData] = useState(null);
     useEffect(()=>{

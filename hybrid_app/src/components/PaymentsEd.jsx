@@ -1,10 +1,11 @@
 import { View , Image, TouchableWithoutFeedback, Keyboard} from "react-native"
-import Styles from "../libs/Styles";
+import StylesCon from "../libs/Styles";
 import { ayaPay, cbPay, kbzPay, wavePay } from "../libs/data";
 import PaymentEdids from "./payments";
 
 
 export const KbzPay = ()=> {
+      const Styles = StylesCon();
     return (
       <TouchableWithoutFeedback
         onPress={() => Keyboard.dismiss()}
@@ -18,6 +19,7 @@ export const KbzPay = ()=> {
     );
 }
 export const WavePay = () => {
+      const Styles = StylesCon();
   return (
     <TouchableWithoutFeedback
       onPress={() => Keyboard.dismiss()}
@@ -30,6 +32,7 @@ export const WavePay = () => {
     </TouchableWithoutFeedback>
   );};
 export const AyaPay = () => {
+      const Styles = StylesCon();
   return (
     <TouchableWithoutFeedback
       onPress={() => Keyboard.dismiss()}
@@ -43,6 +46,7 @@ export const AyaPay = () => {
   );
 };
 export const CbPay = () => {
+      const Styles = StylesCon();
   return (
     <TouchableWithoutFeedback
       onPress={() => Keyboard.dismiss()}

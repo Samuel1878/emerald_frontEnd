@@ -1,11 +1,12 @@
 import { View,Text } from "react-native"
-import styles from "../libs/style"
+import stylesCon from "../libs/style"
 import TwoDmini, { InternetData } from "./2Dmini"
 import HorizonalLine, { ThreeDmini } from "./services"
 import ImageSlider from "./imageSlider"
 
 
 const HomeItems = ({item})=>{
+    const styles = stylesCon();
     switch (item.title) {
         case "TwoDmini":
         return<ImageSlider/>;

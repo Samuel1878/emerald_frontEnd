@@ -8,11 +8,12 @@ import { dateGenerator } from "../libs/helper/generator";
 import AuthContext from "../services/auth/authContext";
 import GlobalContext from "../services/global/globalContext";
 import { BlurView } from "expo-blur";
-import Styles from "../libs/Styles";
+import StylesCon from "../libs/Styles";
 
 
 const Bet = () => {
-    const {betDigits2D,betDigits3D} = useContext(BetContext);
+    const Styles = StylesCon();
+    const {betDigits2D} = useContext(BetContext);
     const {navigation} = useContext(GlobalContext);
     const [modal, setModal] = useState(false);
     const [isEditable, setIsEditable] = useState(false);

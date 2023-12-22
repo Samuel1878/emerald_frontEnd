@@ -1,7 +1,8 @@
 import { View ,Text} from "react-native";
-import Styles from "../libs/Styles";
+import StylesCon from "../libs/Styles";
 
 const TermOfUs = () => {
+      const Styles = StylesCon();
   return (
     <View style={Styles.Container}>
       <Text style={Styles.termofusH}>Term of Us</Text>

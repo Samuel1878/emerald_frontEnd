@@ -1,5 +1,5 @@
 import { View,Text, TouchableOpacity,TextInput, TouchableWithoutFeedback, Keyboard, Modal, Pressable } from "react-native";
-import Styles from "../libs/Styles";
+import StylesCon from "../libs/Styles";
 import { useContext, useEffect, useState } from "react";
 import LocalContext from "../services/localization/localContext";
 import axios from "axios"
@@ -11,6 +11,7 @@ import { BlurView } from "expo-blur";
 
 
 const TransferMain = ()=>{
+    const Styles = StylesCon();
     const {userToken} = useContext(AuthContext);
     const {navigation} = useContext(GlobalContext)
     const {sendTo} = useContext(LocalContext);

@@ -1,9 +1,10 @@
 import { Text, View } from "react-native"
-import styles from "../libs/style"
+import stylesCon from "../libs/style"
 import DataContext from "../services/data/dataContext"
 import { useContext } from "react"
 
 const HorizonalLine = ()=> {
+      const styles = stylesCon();
     return(
         <View style={styles.line}>
             
@@ -12,6 +13,7 @@ const HorizonalLine = ()=> {
 }
 export const ThreeDmini = ()=>{
   const {history3D} = useContext(DataContext);
+      const styles = stylesCon();
   //console.log(history3D)
     return (
       <View style={styles.interData3D}>

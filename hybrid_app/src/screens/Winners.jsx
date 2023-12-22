@@ -1,11 +1,12 @@
 import { FlatList, RefreshControl, View,Text,Image } from "react-native";
-import Styles from "../libs/Styles";
+import StylesCon from "../libs/Styles";
 import { useEffect, useState ,useCallback} from "react";
 import axios from "axios"
 import { GET_2DWINNERS, GET_3DWINNERS, GET_TOPGAINER } from "../hooks/config";
 import themeProvider from "../libs/theme";
 
 const Winners = () => {
+  const Styles = StylesCon();
   const colors = themeProvider().colors;
   const [refreshing,setRefreshing] = useState(false);
   const [topGainer, setTopGainer] = useState([]);

@@ -2,7 +2,7 @@ import { StyleSheet,Platform,Dimensions } from "react-native";
 import { useTheme } from "@react-navigation/native";
 // const colors = useTheme().colors
 import themeProvider from "./theme";
-const styles = () => {
+const stylesCon = () => {
    const colors =  themeProvider().colors ;
    const stylesS = StyleSheet.create({
      home: {
@@ -1903,4 +1903,4 @@ const styles = () => {
    return stylesS
 }
 
-export default styles;
+export default stylesCon;

@@ -1,5 +1,5 @@
-import { FlatList, View,Text ,TextInput,Image, SectionList, TouchableWithoutFeedback, Keyboard, TouchableOpacity} from "react-native";
-import Styles from "../libs/Styles";
+import { View,Text ,TextInput,Image, TouchableWithoutFeedback, Keyboard, TouchableOpacity} from "react-native";
+import StylesCon from "../libs/Styles";
 import { useContext, useEffect, useState } from "react";
 import * as Contacts from "expo-contacts";
 import { AlphabetList } from "react-native-section-alphabet-list";
@@ -9,6 +9,8 @@ import LocalContext from "../services/localization/localContext";
 
 
 const AddressBook = () => {
+    const Styles = StylesCon();
+
     const {navigation} = useContext(GlobalContext);
     const {setSendTo} = useContext(LocalContext)
     const [contacts, setContacts] = useState([]);

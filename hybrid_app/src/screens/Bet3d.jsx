@@ -9,17 +9,17 @@ import {
   Pressable,
 } from "react-native";
 import styles from "../libs/style";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext,  useState } from "react";
 import BetContext from "../services/bet/betContext";
 import axios from "axios";
 import { _2d_BET, _2d_BET_URL, _3d_BET_URL } from "../hooks/config";
-import { dateGenerator } from "../libs/helper/generator";
 import AuthContext from "../services/auth/authContext";
 import { BlurView } from "expo-blur";
 import Styles from "../libs/Styles";
 import GlobalContext from "../services/global/globalContext";
 
 const Bet3D = () => {
+      const styles = stylesCon();
   const {betDigits3D } = useContext(BetContext);
   const {navigation} = useContext(GlobalContext)
   const [isEditable, setIsEditable] = useState(false);

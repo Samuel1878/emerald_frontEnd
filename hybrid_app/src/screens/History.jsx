@@ -1,5 +1,5 @@
 import { FlatList, View,Text, RefreshControl, TouchableOpacity } from "react-native";
-import styles from "../libs/style";
+import stylesCon from "../libs/style";
 import { useCallback, useContext, useEffect, useState } from "react";
 import GlobalContext from "../services/global/globalContext";
 import SocketContext from "../services/socket/socketContext";
@@ -10,6 +10,7 @@ import { Picker } from "@react-native-picker/picker";
 import themeProvider from "../libs/theme";
 
 const History = () => {
+  const styles = stylesCon();
   const colors = themeProvider().colors;
   const [loading,setLoading] = useState(true);
   const {userToken} = useContext(AuthContext);

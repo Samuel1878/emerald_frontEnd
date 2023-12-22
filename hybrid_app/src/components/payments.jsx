@@ -4,13 +4,14 @@ import {
   View,
   Text,
 } from "react-native";
-import Styles from "../libs/Styles";
+import StylesCon from "../libs/Styles";
 import { useContext, useState } from "react";
 import axios from "axios"
 import { _ADD_PAYMENT } from "../hooks/config";
 import AuthContext from "../services/auth/authContext";
 const PaymentEdids = ({method}) => {
     const {userToken} = useContext(AuthContext);
+    const Styles = StylesCon();
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);

@@ -1,11 +1,12 @@
 import { FlatList, Keyboard, Text, TextInput,Image, TouchableOpacity, TouchableWithoutFeedback, View } from "react-native"
-import Styles from "../libs/Styles";
+import StylesCon from "../libs/Styles";
 import { useContext, useEffect, useState } from "react";
 import AnimatedLottieView from "lottie-react-native";
 import GlobalContext from "../services/global/globalContext";
 import LocalContext from "../services/localization/localContext";
 
 const Transfer = () => {
+    const Styles = StylesCon();
     const [tphone,setTphone]=useState("09");
     const {navigation,transactions} = useContext(GlobalContext);
     const {setSendTo} = useContext(LocalContext);

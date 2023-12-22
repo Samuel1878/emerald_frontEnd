@@ -1,11 +1,12 @@
 import { useState } from "react";
 import {SliderBox} from "react-native-image-slider-box";
 import { View } from "react-native";
-import styles from "../libs/style";
+import stylesCon from "../libs/style";
 import themeProvider from "../libs/theme";
 
 const ImageSlider = () =>{
     const colors = themeProvider().colors;
+    const styles = stylesCon();
     const [image, setImage] = useState([require("../../assets/bgA.png"),require("../../assets/bgE.png"),require("../../assets/bgB.jpg")]);
     return (
       <View style={styles.imageSliderCon}>

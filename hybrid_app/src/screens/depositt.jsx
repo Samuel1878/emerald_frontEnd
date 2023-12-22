@@ -1,5 +1,5 @@
-import { Image, TouchableOpacity, View,Text, TextInput, TouchableHighlight } from "react-native";
-import Styles from "../libs/Styles";
+import { Image, TouchableOpacity, View,Text, TextInput} from "react-native";
+import StylesCon from "../libs/Styles";
 import { ayaPay, cbPay, kbzPay, wavePay } from "../libs/data";
 import { useContext, useEffect, useState } from "react";
 import GlobalContext from "../services/global/globalContext";
@@ -7,6 +7,8 @@ import LocalContext from "../services/localization/localContext";
 
 
 const Deposit = ()=>{
+
+    const Styles = StylesCon();
     const {navigation} = useContext(GlobalContext);
     const {setDepoMethod,setDeposit,deposit} = useContext(LocalContext);
     const [valid, setValid] = useState(false);

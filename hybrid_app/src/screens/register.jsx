@@ -1,6 +1,6 @@
 import { Keyboard ,TouchableOpacity,View,Text, Image} from "react-native";
 import { TouchableWithoutFeedback,KeyboardAvoidingView } from "react-native";
-import styles from "../libs/style";
+import stylesCon from "../libs/style";
 import { TextInput } from "react-native";
 import { useEffect, useReducer, useState } from "react";
 import axios from "axios";
@@ -14,6 +14,7 @@ const initialValue = {
     pwd2Focused:false,
 }
 const Register= ({navigation}) => {
+    const styles = stylesCon();
     const colors = themeProvider().colors;
     const [phone, setPhone] = useState();
     const [password, setPassword] = useState("");

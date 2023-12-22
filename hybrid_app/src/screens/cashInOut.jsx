@@ -1,10 +1,11 @@
 import { View, Text } from "react-native";
-import Styles from "../libs/Styles";
+import StylesCon from "../libs/Styles";
 import { useContext } from "react";
 import LocalContext from "../services/localization/localContext";
 import { AntDesign } from "@expo/vector-icons";
 import themeProvider from "../libs/theme";
 export const CashInOut = () => {
+      const Styles = StylesCon();
   const colors = themeProvider().colors;
   const { receipts } = useContext(LocalContext);
   console.log(receipts)

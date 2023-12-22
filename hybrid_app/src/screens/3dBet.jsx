@@ -1,7 +1,7 @@
 import { View ,Text, TouchableOpacity, TextInput, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard} from "react-native";
-import styles from "../libs/style";
+import stylesCon from "../libs/style";
 import WheelPickerExpo from "react-native-wheel-picker-expo";
-import { useEffect, useState,useRef, useCallback, useContext } from "react";
+import { useEffect, useState,useRef, useContext } from "react";
 import { Entypo } from "@expo/vector-icons";
 import LottieView from "lottie-react-native";
 import GlobalContext from "../services/global/globalContext";
@@ -9,7 +9,8 @@ import BetContext from "../services/bet/betContext";
 import themeProvider from "../libs/theme";
 
 const ThreeD_Bet = ({navigation}) => {
-  const colors = themeProvider().colors;
+    const styles = stylesCon();
+    const colors = themeProvider().colors;
     const {money} = useContext(GlobalContext)
     const [firstDigit, setFirstDigit] = useState({label:"0"});
     const [secondDigit, setSecondDigit] = useState({ label: "0" });

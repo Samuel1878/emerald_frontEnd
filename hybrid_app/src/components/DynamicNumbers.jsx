@@ -1,7 +1,8 @@
 import { Text, View } from "react-native";
-import styles from "../libs/style";
+import stylesCon from "../libs/style";
 
 const DynamicNumber = ()=>{
+  const styles = stylesCon();
     return (
       <View style={styles.DynamicNumbers}>
         <View style={styles.DyNumbers}>

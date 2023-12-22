@@ -1,22 +1,18 @@
-import { View, Text, Image, TouchableWithoutFeedback, FlatList } from "react-native";
-import styles from "../libs/style";
-import { LoginBtn, RegisterBtn } from "../components/logRegBtn";
-import { BlurView } from "expo-blur";
+import { View, Text, Image,FlatList } from "react-native";
+import stylesCon from "../libs/style";
 import LogReg from "../layouts/logReg";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef} from "react";
 import GlobalContext from "../services/global/globalContext";
 import ServiceBtn from "../components/ServiceBtn";
 import { TouchableOpacity } from "react-native";
-import { AntDesign } from "@expo/vector-icons";
-import { TextInput } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { DATA } from "../libs/data";
 import LottieView from "lottie-react-native";
 import AuthContext from "../services/auth/authContext";
 import themeProvider from "../libs/theme";
   
 const More = ({ navigation }) => {
+  const styles = stylesCon();
   const colors = themeProvider().colors;
   const animation = useRef(null)
   const { profile, proType, name, phone, level } = useContext(GlobalContext);

@@ -1,8 +1,7 @@
-import { FlatList, Text, TouchableOpacity, TouchableWithoutFeedback, View } from "react-native"
-import Styles from "../libs/Styles";
+import { FlatList, Text, TouchableOpacity, View } from "react-native"
+import StylesCon from "../libs/Styles";
 import { useContext, useEffect, useState } from "react";
 import GlobalContext from "../services/global/globalContext";
-import AnimatedLottieView from "lottie-react-native";
 import LottieView from "lottie-react-native";
 import LocalContext from "../services/localization/localContext";
 import SocketContext from "../services/socket/socketContext";
@@ -10,6 +9,7 @@ import { TOPUP, TRANSACTION } from "../libs/actions";
 import AuthContext from "../services/auth/authContext";
 import themeProvider from "../libs/theme";
 const TransferHis = ()=> {
+      const Styles = StylesCon();
   const colors = themeProvider().colors;
   const { transactions, setTransactions, topUp, setTopUp, navigation,name,phone } =
     useContext(GlobalContext);

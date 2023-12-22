@@ -1,5 +1,5 @@
 import {  View,Animated,RefreshControl} from "react-native";
-import styles from "../libs/style";
+import stylesCon from "../libs/style";
 import HomeItems from "../components/homeItems";
 import DynamicHeader from "../components/DynamicHeader";
 import {  useRef, useState ,useCallback, useContext, useEffect} from "react";
@@ -11,7 +11,7 @@ import i18n from "../libs/lang";
 import themeProvider from "../libs/theme";
 const Home = ({navigation}) => {
   const colors = themeProvider().colors;
-  
+    const styles = stylesCon();
     let scrollOffsetY = useRef(new Animated.Value(0)).current;
     const [refreshing, setRefreshing]= useState(false);
     const {setIsLoading} = useContext(GlobalContext);

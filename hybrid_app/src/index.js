@@ -1,7 +1,6 @@
-import { NavigationContainer } from "@react-navigation/native";
+
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { FontAwesome5 } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import Home from "./screens/Home";
 import ThreeD from "./screens/3D";
@@ -11,7 +10,7 @@ import More from "./screens/More";
 import {useFonts} from "expo-font";
 import { useEffect ,useContext} from "react";
 import * as SplashScreen from "expo-splash-screen";
-import { Text, View, } from "react-native";
+import {  View, } from "react-native";
 import Loader from "./components/loader";
 import GlobalContext from "./services/global/globalContext";
 import themeProvider from "./libs/theme";

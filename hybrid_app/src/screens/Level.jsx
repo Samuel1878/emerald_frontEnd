@@ -1,9 +1,10 @@
 import { View ,Text} from "react-native"
-import Styles from "../libs/Styles"
+import StylesCon from "../libs/Styles"
 import { useContext } from "react"
 import GlobalContext from "../services/global/globalContext"
 
 const Level = () =>{
+   const Styles = StylesCon();
     const {level} = useContext(GlobalContext);
     console.log(level)
     return(

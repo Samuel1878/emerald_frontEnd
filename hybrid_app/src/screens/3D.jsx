@@ -1,7 +1,5 @@
 import { FlatList,SafeAreaView, Text, TouchableOpacity, View } from "react-native";
-import styles from "../libs/style";
-import { LoginBtn, RegisterBtn } from "../components/logRegBtn";
-import {BlurView} from "expo-blur";
+import stylesCon from "../libs/style";
 import LogReg from "../layouts/logReg";
 import { useContext, useState } from "react";
 import GlobalContext from "../services/global/globalContext";
@@ -19,6 +17,7 @@ import themeProvider from "../libs/theme";
 //     {id:5,result:435,date:"21/23/112"}
 // ];
 const Item = ({item})=>{
+    const styles = stylesCon();
   
     return (
       <View style={styles.threeDItem} key={item?.date}>
@@ -40,6 +39,7 @@ const ThreeD = () => {
     const [isOpen, setIsOpen] = useState(true);
     const {history3D} = useContext(DataContext);
     const {userToken} = useContext(AuthContext);
+    const styles = stylesCon();
 
     
     return (
