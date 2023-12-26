@@ -1406,6 +1406,28 @@ const StylesCon = () => {
       justifyContent: "center",
       alignItems: "center",
     },
+    ////LanguageChoose
+    langContainer:{
+      flex:1,
+      backgroundColor:colors.bg_2,
+      alignItems:"center",
+    },
+    langCon:{
+      width:"90%",
+      padding:20,
+      backgroundColor:colors.bg_3,
+      borderRadius:10,
+      marginVertical:25,
+      flexDirection:"row",
+      alignItems:"center",
+      
+    },
+    flagImg:{
+      width:65,
+      height:65,
+      borderRadius:"50%",
+      marginHorizontal:20
+    }
   });
   return StylesS
 };

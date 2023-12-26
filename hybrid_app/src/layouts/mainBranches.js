@@ -37,6 +37,7 @@ import { ForgetMain } from "../components/forgets";
 import Vouchers from "../hooks/vouchers";
 import { Forget, ForgetPassword, ForgetPin } from "../components/forget";
 import themeProvider from "../libs/theme";
+import LanguageChoose from "../components/language";
 
 
 const Stack = createNativeStackNavigator();
@@ -452,6 +453,17 @@ const BranchContainer = () => {
           component={Vouchers}
           options={{
             headerTitle: "Voucher",
+            headerShown: true,
+            headerTintColor: colors.text_1b,
+            headerStyle: { backgroundColor: colors.app_1 },
+            headerTitleStyle: { color: colors.text_1b },
+          }}
+        />
+        <Stack.Screen
+          name="language"
+          component={LanguageChoose}
+          options={{
+            headerTitle: "Choose Language",
             headerShown: true,
             headerTintColor: colors.text_1b,
             headerStyle: { backgroundColor: colors.app_1 },

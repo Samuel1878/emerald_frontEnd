@@ -4,7 +4,7 @@ import LocalContext from "./localContext";
 import { useColorScheme } from "react-native";
 const Local = ({children}) =>{
     const [lang,setLang] = useState("en");
-     const colorScheme = useColorScheme();
+    const colorScheme = useColorScheme();
     const [theme, setTheme] = useState(colorScheme || "dark")
     const [sendTo, setSendTo] = useState("");
     const [detail, setDetail] = useState({});

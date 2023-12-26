@@ -12,8 +12,7 @@ export const ChangeModel = ({changed})=> {
         onRequestClose={() => {
             Alert.alert("Modal has been closed.");
             setModal(!changed);
-        }}
-        >
+        }}>
         <BlurView intensity={50} tint="dark" style={Styles.modal}>
             <View style={Styles.modalBox}>
             <Text style={Styles.Txt2M}>Successfully changed</Text>

@@ -50,6 +50,7 @@ const stylesCon = () => {
        justifyContent: "flex-end",
      },
 
+
      liveNo: {
        fontSize: 25,
        fontWeight: "900",
@@ -68,12 +69,21 @@ const stylesCon = () => {
      dataMidCon: {
        flex: 1,
      },
+
      dataRightCon: {
        flex: 1,
        width: 75,
        alignItems: "flex-end",
        justifyContent: "flex-start",
        padding: 10,
+     },
+     langBtn : {
+      width:60,
+      padding:10,
+      marginTop:35,
+      flexDirection:"row",
+      justifyContent:"space-between",
+      alignItems:"center"
      },
      homeDataCon: {
        justifyContent: "center",

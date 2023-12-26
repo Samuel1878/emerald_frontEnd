@@ -10,7 +10,7 @@ import More from "./screens/More";
 import {useFonts} from "expo-font";
 import { useEffect ,useContext} from "react";
 import * as SplashScreen from "expo-splash-screen";
-import {  View, } from "react-native";
+import {  View } from "react-native";
 import Loader from "./components/loader";
 import GlobalContext from "./services/global/globalContext";
 import themeProvider from "./libs/theme";
