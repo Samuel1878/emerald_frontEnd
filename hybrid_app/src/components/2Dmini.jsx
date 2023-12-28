@@ -2,21 +2,24 @@ import { View,Text } from "react-native";
 import stylesCon from "../libs/style";
 import { useContext } from "react";
 import DataContext from "../services/data/dataContext";
-
+import { useTranslation } from "react-i18next"; 
 const TwoDmini = () => {
   const {results2D} = useContext(DataContext);
-  const styles = stylesCon();
+
+  const styles = stylesCon(); 
+  const { t, i18n } = useTranslation();
+  
   return (
     <View style={styles.twoDmini}>
       <View style={styles.dataA}>
-        <Text style={styles.dataHeader}>12:01 PM</Text>
+        <Text style={styles.dataHeader}>{t("af")}</Text>
         <View style={styles.dataACon}>
           <View style={styles.dataCon}>
-            <Text style={styles.dataH}>set</Text>
+            <Text style={styles.dataH}>{ t("set")}</Text>
             <Text style={styles.dataV}>{results2D?.afSet}</Text>
           </View>
           <View style={styles.dataCon}>
-            <Text style={styles.dataH}>value</Text>
+            <Text style={styles.dataH}>{t("value")}</Text>
             <Text style={styles.dataV}>{results2D?.afValue}</Text>
           </View>
           <View style={styles.dataCon}>
@@ -26,14 +29,14 @@ const TwoDmini = () => {
         </View>
       </View>
       <View style={styles.dataA}>
-        <Text style={styles.dataHeader}>4:30 PM</Text>
+        <Text style={styles.dataHeader}>{t("ev")}</Text>
         <View style={styles.dataACon}>
           <View style={styles.dataCon}>
-            <Text style={styles.dataH}>set</Text>
+            <Text style={styles.dataH}>{t("set")}</Text>
             <Text style={styles.dataV}>{results2D?.evSet}</Text>
           </View>
           <View style={styles.dataCon}>
-            <Text style={styles.dataH}>value</Text>
+            <Text style={styles.dataH}>{t("value")}</Text>
             <Text style={styles.dataV}>{results2D?.evValue}</Text>
           </View>
           <View style={styles.dataCon}>
@@ -47,18 +50,19 @@ const TwoDmini = () => {
 };
 export const InternetData = () => {
   const {results2D} = useContext(DataContext);
+    const { t, i18n } = useTranslation();
   const styles = stylesCon();
   console.log(results2D)
     return (
       <View style={styles.internetDataCon}>
         <View style={styles.interData}>
-          <Text style={styles.interHeader}>90:30 AM</Text>
+          <Text style={styles.interHeader}>{t("mn")}</Text>
           <View style={styles.inter}>
-            <Text style={styles.interH}>Modern</Text>
+            <Text style={styles.interH}>{t('modern')}</Text>
             <Text style={styles.interV}>{results2D?.mModern}</Text>
           </View>
           <View style={styles.inter}>
-            <Text style={styles.interH}>Internet</Text>
+            <Text style={styles.interH}>{t("internet")}</Text>
             <Text style={styles.interV}>{results2D?.mInternet}</Text>
           </View>
           {/* <View style={styles.inter}>
@@ -67,13 +71,13 @@ export const InternetData = () => {
           </View> */}
         </View>
         <View style={styles.interData}>
-          <Text style={styles.interHeader}>2:00 PM</Text>
+          <Text style={styles.interHeader}>{t("nn")}</Text>
           <View style={styles.inter}>
-            <Text style={styles.interH}>Modern</Text>
+            <Text style={styles.interH}>{t("modern")}</Text>
             <Text style={styles.interV}>{results2D?.eModern}</Text>
           </View>
           <View style={styles.inter}>
-            <Text style={styles.interH}>Internet</Text>
+            <Text style={styles.interH}>{t("internet")}</Text>
             <Text style={styles.interV}>{results2D?.eInternet}</Text>
           </View>
         </View>

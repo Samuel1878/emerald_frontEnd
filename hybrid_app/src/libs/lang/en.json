@@ -1,8 +1,7 @@
 {
     "translation": {
-      "hello":"Hello mother fucker",
       "confirm":"confirm",
-      "updated":"Updated:",
+      "updated":"updated:",
       "set":"set",
       "value":"value",
       "2D":"2D",
@@ -12,7 +11,11 @@
       "latest 3D result":"Latest 3D result",
       "Home":"Home",
       "Wallet":"Wallet",
-      "More":"More"
+      "More":"More",
+      "af":"12:00 PM",
+      "ev":"04:30 PM",
+      "mn":"09:30 AM",
+      "nn":"02:00 PM"
 
     }
   }

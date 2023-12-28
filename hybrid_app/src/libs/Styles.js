@@ -1062,7 +1062,7 @@ const StylesCon = () => {
       fontSize: 18,
       fontFamily: "Roboto_Bold",
       fontWeight: "600",
-      color:colors.text_2,
+      color: colors.text_2,
       marginVertical: 5,
     },
     depositBtnTxt: {
@@ -1264,7 +1264,7 @@ const StylesCon = () => {
       marginVertical: 5,
     },
     Txt2: {
-      fontSize: 16,
+      fontSize: 22,
       fontFamily: "Roboto_Bold",
       fontWeight: "600",
       color: colors.text_2,
@@ -1279,22 +1279,37 @@ const StylesCon = () => {
       // textAlign: "center",
     },
     Txt4: {
-      fontSize: 22,
+      fontSize: 16,
       fontFamily: "Roboto_Bold",
       fontWeight: "700",
       color: colors.text_3,
       marginVertical: 5,
       textAlign: "center",
     },
+    Txt5: {
+      fontSize: 15,
+      fontFamily: "Roboto_Bold",
+      fontWeight: "700",
+      color: colors.text_1,
+      marginVertical: 5,
+      textAlign: "center",
+    },
+    Txt1M: {
+      fontSize: 22,
+      fontFamily: "Roboto_Bold",
+      fontWeight: "600",
+      color: colors.app_1,
+      textAlign: "center",
+    },
     Txt2M: {
-      fontSize: 16,
+      fontSize: 18,
       fontFamily: "Roboto_Bold",
       fontWeight: "600",
       color: colors.app_1,
       textAlign: "center",
     },
     Txt3M: {
-      fontSize: 18,
+      fontSize: 16,
       fontFamily: "Roboto_Bold",
       fontWeight: "600",
       color: colors.app_1,
@@ -1407,27 +1422,33 @@ const StylesCon = () => {
       alignItems: "center",
     },
     ////LanguageChoose
-    langContainer:{
-      flex:1,
-      backgroundColor:colors.bg_2,
-      alignItems:"center",
+    langContainer: {
+      flex: 1,
+      backgroundColor: colors.bg_2,
+      alignItems: "center",
     },
-    langCon:{
-      width:"90%",
-      padding:20,
-      backgroundColor:colors.bg_3,
-      borderRadius:10,
-      marginVertical:25,
-      flexDirection:"row",
-      alignItems:"center",
-      
+    langCon: {
+      width: "90%",
+      padding: 20,
+      backgroundColor: colors.bg_3,
+      borderRadius: 10,
+      marginVertical: 25,
+      flexDirection: "row",
+      alignItems: "center",
+      gap:25
     },
-    flagImg:{
-      width:65,
-      height:65,
-      borderRadius:"50%",
-      marginHorizontal:20
-    }
+    langChoseCon: {
+      shadowColor:colors.app_1,
+      shadowOffset:{x:10,y:10},
+      shadowOpacity:.5,
+      shadowRadius:10,
+      borderRadius:10
+    },
+    flagImg: {
+      width: 65,
+      height: 65,
+      borderRadius: 65,
+    },
   });
   return StylesS
 };

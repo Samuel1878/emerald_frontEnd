@@ -1,6 +1,20 @@
 {
     "translation": {
-      "hello":"Hello",
-      "this line is translated":"This line is translated Chinese"
+      "confirm":"确认",
+      "updated":"",
+      "set":"放",
+      "value":"价值",
+      "2D":"2D",
+      "3D":"3D",
+      "modern":"现代",
+      "internet":"互联网",
+      "latest 3D result":"最新 3D 结果",
+      "Home":"家",
+      "Wallet":"钱包",
+      "More":"更多的",
+      "af":"12:00 PM",
+      "ev":"04:30 PM",
+      "mn":"09:30 AM",
+      "nn":"02:00 PM"
     }
   }
