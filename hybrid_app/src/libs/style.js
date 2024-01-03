@@ -50,7 +50,6 @@ const stylesCon = () => {
        justifyContent: "flex-end",
      },
 
-
      liveNo: {
        fontSize: 25,
        fontWeight: "900",
@@ -77,13 +76,13 @@ const stylesCon = () => {
        justifyContent: "flex-start",
        padding: 10,
      },
-     langBtn : {
-      width:60,
-      padding:10,
-      marginTop:35,
-      flexDirection:"row",
-      justifyContent:"space-between",
-      alignItems:"center"
+     langBtn: {
+       width: 60,
+       padding: 10,
+       marginTop: 35,
+       flexDirection: "row",
+       justifyContent: "space-between",
+       alignItems: "center",
      },
      homeDataCon: {
        justifyContent: "center",
@@ -922,50 +921,65 @@ const stylesCon = () => {
        backgroundColor: colors.app_1,
      },
      meProfile: {
-       height: 200,
-       width: 200,
+       flex: 1,
+       height: "100%",
+       width: "100%",
        backgroundColor: colors.app_1,
-       position: "absolute",
        alignSelf: "center",
-       top: -100,
        zIndex: 1,
-       borderRadius: "100%",
        // overflow: "hidden",
      },
      meImg: {
        width: "100%",
        height: "100%",
-       borderRadius: 300,
      },
      meBottom: {
        flex: 2,
        backgroundColor: colors.bg_2,
      },
+     changePhBtnCon: {
+       paddingVertical: 10,
+       flexDirection: "row",
+       justifyContent: "space-around",
+       alignItems: "center",
+     },
+     ///Change Profile Btn
+     changeProfileBtn: {
+       backgroundColor: colors.bg_3,
+       borderRadius: 10,
+       justifyContent: "center",
+       alignItems: "center",
+       padding: 15,
+     },
+     upgradeBtn:{
+        padding:20,
+        backgroundColor:colors.bg_3b,
+        borderRadius:20,
+        marginVertical:20
+     },
+     //  cameraImg: {
+     //    width: 50,
+     //    height: 50,
+     //  },
      meNameChangeCon: {
        flex: 1,
        alignItems: "center",
+       justifyContent: "space-around",
+     },
+     infoChangeCon: {
+       width: "100%",
+       flex: 1,
+       alignItems: "center",
+      
      },
      nameChangeInput: {
        padding: 15,
        backgroundColor: colors.bg_3,
-       width: "80%",
+       width: "85%",
        color: colors.app_1,
        fontSize: 18,
        borderRadius: 10,
-       marginTop: 120,
-       borderLeftColor: colors.app_1,
-       borderLeftWidth: 20,
-       shadowColor: colors.bg_1,
-       shadowOpacity: 0.9,
-       shadowOffset: { x: 10, y: 20 },
-       shadowRadius: 10,
-     },
-     mePhone: {
-       width: "80%",
-       padding: 15,
-       backgroundColor: colors.bg_3,
-       borderRadius: 10,
-       marginVertical: 20,
+       marginVertical:10,
        borderLeftColor: colors.app_1,
        borderLeftWidth: 20,
        shadowColor: colors.bg_1,
@@ -982,8 +996,8 @@ const stylesCon = () => {
      nameChangeBtn: {
        backgroundColor: colors.app_4,
        padding: 15,
-       width: "50%",
-       borderRadius: "25%",
+       width: "80%",
+       borderRadius: "20%",
        alignItems: "center",
        justifyContent: "center",
        shadowColor: colors.bg_1,
@@ -1048,21 +1062,7 @@ const stylesCon = () => {
        fontWeight: "600",
        color: colors.bg_1,
      },
-     ///Change Profile Btn
-     changeProfileBtn: {
-       position: "absolute",
-       bottom: 0,
-       right: 0,
 
-       backgroundColor: colors.bg_3b,
-       borderRadius: "100%",
-       justifyContent: "center",
-       alignItems: "center",
-     },
-     cameraImg: {
-       width: 50,
-       height: 50,
-     },
      ///3D UIX
      threeDCon: {
        flex: 1,

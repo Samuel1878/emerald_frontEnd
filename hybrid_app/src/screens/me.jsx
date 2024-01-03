@@ -11,27 +11,27 @@ import { ChangeModel } from "../components/modals";
 
 const Me = ()=>{
     const styles = stylesCon();
-    const {profile,phone,name,navigation} = useContext(GlobalContext);
+    const {profile,phone,name,navigation,level} = useContext(GlobalContext);
     const {userToken} = useContext(AuthContext)
     const [nameChange, setNameChange] = useState(name); 
     const [valid, setValid] = useState(false)
     const [changed,setChanged] = useState(false);
     const [image, setImage] = useState(null);
     const REG_NAME = /^[a-zA-Z0-9]+$/;
-    const createFormData = (uri) => {
-      const fileName = uri.split('/').pop();
-      const fileType = fileName.split('.').pop();
-      const formData = new FormData();
-      formData.append('image', {
-        name: fileName,
-        uri,
-        type: `image/${fileType}`,
-      });
-      return formData;
-    };
+    // const createFormData = (uri) => {
+    //   const fileName = uri.split('/').pop();
+    //   const fileType = fileName.split('.').pop();
+    //   const formData = new FormData();
+    //   formData.append('image', {
+    //     name: fileName,
+    //     uri,
+    //     type: `image/${fileType}`,
+    //   });
+    //   return formData;
+    // };
     const SaveFnc = () => {
-      const data = createFormData(image);
-      console.log(data)
+      // const data = createFormData(image);
+      // console.log(data)
             name!= nameChange && valid && axios.post(_CHANGE_NAME_URL, {name:nameChange,userToken:userToken}).then((e)=>{
                if(e.status===200||201){
                 setChanged(true);
@@ -81,9 +81,7 @@ const Me = ()=>{
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <View style={styles.Container}>
           <ChangeModel changed={changed} />
-          <View style={styles.meTop}></View>
-
-          <View style={styles.meBottom}>
+          <View style={styles.meTop}>
             <View style={styles.meProfile}>
               {image ? (
                 <Image
@@ -98,7 +96,7 @@ const Me = ()=>{
                   source={profile}
                 />
               )}
-
+              {/* 
               <TouchableOpacity
                 style={styles.changeProfileBtn}
                 onPress={ImgPickerFunc}
@@ -108,19 +106,46 @@ const Me = ()=>{
                   style={styles.cameraImg}
                   source={require("../../assets/camera.json")}
                 />
+              </TouchableOpacity> */}
+            </View>
+          </View>
+          <View style={styles.meBottom}>
+            <View style={styles.changePhBtnCon}>
+              <TouchableOpacity style={styles.changeProfileBtn}>
+                <Text>Take photo</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.changeProfileBtn}
+                onPress={ImgPickerFunc}
+              >
+                <Text>Choose photo</Text>
               </TouchableOpacity>
             </View>
             <KeyboardAvoidingView style={styles.meNameChangeCon}>
-              <TextInput
-                style={styles.nameChangeInput}
-                value={nameChange}
-               // defaultValue={name}
-                onChangeText={(e) => setNameChange(e)}
-              />
-              <View style={styles.mePhone}>
-                <Text style={styles.meTxt}>{phone}</Text>
+              <View style={styles.infoChangeCon}>
+                <TextInput
+                  style={styles.nameChangeInput}
+                  value={nameChange}
+                  // defaultValue={name}
+                  onChangeText={(e) => setNameChange(e)}
+                />
+                <View style={styles.nameChangeInput}>
+                  <Text style={styles.meTxt}>{phone}</Text>
+                </View>
+                <View style={styles.nameChangeInput}>
+                  <Text style={styles.meTxt}>LEVEL {level}</Text>
+                </View>
+                {!valid && <Text style={styles.red}>Invalid character</Text>}
+                {
+                  level==1?<View>
+                    <TouchableOpacity style={styles.upgradeBtn}>
+                      <Text style={styles.meTxt}>Upgrade your level</Text>
+                    </TouchableOpacity>
+                  </View>:<View>
+                    </View>
+                }
               </View>
-              {!valid&&<Text style={styles.red}>Invalid character</Text>}
+
               <TouchableOpacity style={styles.nameChangeBtn} onPress={SaveFnc}>
                 <Text style={styles.saveTxt}>Save</Text>
               </TouchableOpacity>
